@@ -5,8 +5,14 @@ terraform {
       version = "~> 3.27"
     }
   }
-
   required_version = ">= 1.0.4"
+  cloud {
+    organization = "aws-poc-cloud"
+
+    workspaces {
+      name = "aws-terraformcloud-github-poc"
+    }
+  }
 }
 
 provider "aws" {
