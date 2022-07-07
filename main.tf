@@ -44,7 +44,7 @@ resource "aws_instance" "app_server" {
     user    = "ec2-user"
     timeout = "2m"
     agent 	= false
-    private_key = var.private_key
+    private_key = var.PRIVATE_KEY
   }
 
 }
