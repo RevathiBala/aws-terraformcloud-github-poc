@@ -37,7 +37,7 @@ resource "aws_instance" "app_server" {
     inline = [
       "sudo yum -y install java-1.8.0-openjdk",
       "cd /tmp/staging",
-      "java -jar aws-terraformcloud-github"
+      "java -jar aws-terraformcloud-github-0.0.1-SNAPSHOT.jar"
     ]
   }
   tags = {
