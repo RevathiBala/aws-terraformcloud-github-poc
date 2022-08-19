@@ -24,7 +24,7 @@ provider "aws" {
 
 resource "aws_instance" "app_server" {
   count                  = 1
-  ami                    = "ami-08df646e18b182346"
+  ami                    = "ami-076e3a557efe1aa9c"
   instance_type          = "t2.micro"
   key_name               = data.aws_key_pair.example.key_name
   vpc_security_group_ids = [data.aws_security_group.selected.id]
@@ -60,5 +60,5 @@ data "aws_security_group" "selected" {
 }
 
 data "aws_key_pair" "example" {
-  key_name           = "AWS"
+  key_name           = "aws-poc"
 }
